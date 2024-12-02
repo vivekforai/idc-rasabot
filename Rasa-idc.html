@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Rasa Chatbot</title>
+    <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+</head>
+<body>
+    <div id="webchat"></div>
+    <script>
+        WebChat.default.init({
+            selector: "#webchat",
+            initPayload: "/get_started", // Rasa's initial payload intent
+            customData: { language: "en" }, // Add any custom data
+            socketUrl: "https://rasa-project-4.onrender.com", // Replace with your Render URL
+            socketPath: "/socket.io/",
+            title: "My Chatbot",
+            subtitle: "Powered by Rasa",
+        });
+    </script>
+</body>
+</html>
